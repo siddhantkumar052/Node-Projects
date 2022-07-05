@@ -1,0 +1,12 @@
+<div class="showsList">
+    
+    <h2>{{ keywords }}</h2>
+    <ul>
+        {{#each search_details}}
+            <li><a href="/show/{{ this.show.id }}" >{{ this.show.name }}</a></li>
+        {{/each}}
+    </ul>
+    
+</div>
+
+<a href="/" class = "homepage-link">Make another search</a>

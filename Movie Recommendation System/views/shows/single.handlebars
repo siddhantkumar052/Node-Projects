@@ -1,0 +1,30 @@
+<article class="showsList">
+  <h1>{{ show_details.name }}</h1> 
+  <div class="img-container">
+    <img class="showimage" alt= {{ show_details.name }} src="{{ show_details.image.medium }}"/> 
+  </div>
+  <dl> 
+    <dt>Language</dt> 
+    <dd>{{ show_details.language }}</dd>
+    <dt>Genres: </dt> 
+    <dd> 
+      <ul> 
+        {{#each  show_details.genres }}
+            <li>{{ this }}</li> 
+        {{/each}}
+      </ul> 
+    </dd> 
+
+    <dt>Average Rating</dt> 
+    <dd>{{ show_details.rating.average }}</dd> 
+
+    <dt>Network</dt> 
+    <dd>{{ show_details.network.name }}</dd> 
+
+    <dt>Summary</dt> 
+    <dd>{{{ show_details.summary }}}</dd> 
+
+  </dl> 
+</article>
+
+<a href="/" class = "homepage-link">Make another search</a>
